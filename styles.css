@@ -1,0 +1,97 @@
+body {
+    background-color: blue;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.all {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+}
+
+
+.header {
+    display: flex;
+    flex: 1;
+    font-size: 48px;
+    background-color: blue;
+    justify-content: center;
+    align-items: center;
+    font-weight: 800;
+}
+
+.body {
+    display: grid;
+    flex: 1;
+    grid-template-columns: repeat(3, 1fr);
+    min-height: 60%;
+    background-color: green;
+    background-image: linear-gradient(blue, green);
+}
+
+.winner {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.board {
+    display: flex;
+    flex-direction: column;
+    min-width: 100%;
+    grid-column: 2 / 3;
+    max-width: clamp(200px, 30%, 35%);
+    background-color: green;
+}
+
+.row {
+    flex: 1;
+    background-color: brown;
+    display: flex;
+    border-bottom: 5px solid blue;
+}
+
+
+.col {
+    display: flex;
+    flex: 1;
+    background-color: orange;
+    justify-content: center;
+    border-right: 5px solid blue;
+    align-items: center;
+    font-size: 48px;
+}
+
+
+.col > button {
+    flex: 1;
+    min-height: 100%;
+    opacity: 0.1;
+}
+
+.col:last-child,
+.row:last-child {
+    border: none;
+}
+
+
+
+.footer {
+    display: flex;
+    flex: 1;
+    background-color: green;
+    justify-content: center;
+    align-items: center;
+}
+
+.reset {
+    width: 20%;
+    height: 40%;
+    font-weight: 600;
+    font-size: 24px;
+}
